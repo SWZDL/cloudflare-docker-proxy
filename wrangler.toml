@@ -27,6 +27,7 @@ routes = [
    { pattern = "k8s.pvecloud.space", custom_domain = true },
    { pattern = "ghcr.pvecloud.space", custom_domain = true },
    { pattern = "cloudsmith.pvecloud.space", custom_domain = true },
+   { pattern = "ecr.pvecloud.space", custom_domain = true }
  ]
 
 [env.production.vars]
