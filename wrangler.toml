@@ -19,15 +19,15 @@ CUSTOM_DOMAIN = "pvecloud.space"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.libcuda.so", custom_domain = true },
-#   { pattern = "quay.libcuda.so", custom_domain = true },
-#   { pattern = "gcr.libcuda.so", custom_domain = true },
-#   { pattern = "k8s-gcr.libcuda.so", custom_domain = true },
-#   { pattern = "k8s.libcuda.so", custom_domain = true },
-#   { pattern = "ghcr.libcuda.so", custom_domain = true },
-#   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
-# ]
+routes = [
+   { pattern = "docker.pvecloud.space", custom_domain = true },
+   { pattern = "quay.pvecloud.space", custom_domain = true },
+   { pattern = "gcr.pvecloud.space", custom_domain = true },
+   { pattern = "k8s-gcr.pvecloud.space", custom_domain = true },
+   { pattern = "k8s.pvecloud.space", custom_domain = true },
+   { pattern = "ghcr.pvecloud.space", custom_domain = true },
+   { pattern = "cloudsmith.pvecloud.space", custom_domain = true },
+ ]
 
 [env.production.vars]
 MODE = "production"
@@ -36,9 +36,13 @@ CUSTOM_DOMAIN = "pvecloud.space"
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-# route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
+route = { pattern = "docker-staging.pvecloud.space", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
 TARGET_UPSTREAM = ""
 CUSTOM_DOMAIN = "pvecloud.space"
+
+
+[observability.logs]
+enabled = true
